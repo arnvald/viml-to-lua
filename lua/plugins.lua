@@ -22,10 +22,20 @@ return require('packer').startup(function()
 
   -- general dev
   use 'neovim/nvim-lspconfig'
-  use 'kabouzeid/nvim-lspinstall'
-  use 'glepnir/lspsaga.nvim'
-  use 'hrsh7th/nvim-compe'
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'williamboman/nvim-lsp-installer'
+  use 'tami5/lspsaga.nvim'
+  use 'onsails/lspkind.nvim' -- icons in autocomplete source
+  use 'hrsh7th/nvim-cmp' -- autocomplete engine (see autocomplete.lua)
+  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for cmp
+  use 'hrsh7th/cmp-buffer' -- buffer source for cmp
+  use 'hrsh7th/cmp-path' -- path source for cmp
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  }
   use 'scrooloose/nerdcommenter' -- commenting shortcuts
 
   require'nvim-treesitter.configs'.setup {
