@@ -93,3 +93,6 @@ nmap('<C-e>', '<cmd>Lspsaga show_line_diagnostics<CR>')
 
 -- git
 nmap('<C-g>', '<cmd>GitMessenger<cr>')
+
+-- oil to behave like vinegar
+vim.keymap.set("n", "-", require("oil").open)

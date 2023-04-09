@@ -66,8 +66,9 @@ return require('packer').startup(function()
   use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
   use 'tpope/vim-eunuch' -- wrappers UNIX commands
   use 'tpope/vim-surround' -- surround characters shortcuts
-  use 'tpope/vim-vinegar' -- file browser
-  use 'kyazdani42/nvim-web-devicons' -- icons when searching
+  use 'nvim-tree/nvim-web-devicons' -- icons in file explorer
+  use { 'stevearc/oil.nvim' } -- file explorer, vinegar replacement
+  require('oil').setup()
 
   -- testing
   use 'kassio/neoterm' -- terminal wrapper
