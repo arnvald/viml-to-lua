@@ -24,6 +24,8 @@ function tmap(shortcut, command)
   map('t', shortcut, command)
 end
 
+vim.cmd('nnoremap <leader>a :Git blame<cr>')
+
 -- sane regexes
 nmap('/', '/\\v')
 vmap('/', '/\\v')
@@ -80,7 +82,7 @@ vim.o.splitright = true -- when splitting vertically, mnove coursor to right pan
 -- PLUGINS
 
 -- Find files using Telescope command-line sugar.
-nmap("<C-p>", "<cmd>Telescope find_files<cr>")
+nmap("<leader>p", "<cmd>Telescope find_files<cr>")
 nmap("<leader>f", "<cmd>Telescope live_grep<cr>")
 nmap("<leader>bb", "<cmd>Telescope buffers<cr>")
 nmap("<leader>hh", "<cmd>Telescope help_tags<cr>")
