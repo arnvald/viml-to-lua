@@ -84,9 +84,10 @@ vim.cmd([[
   augroup END
 ]])
 
-vim.o.background = 'dark'
-vim.cmd('colorscheme Tomorrow-Night')
---vim.g.material_style = "palenight"
+vim.opt.background = 'dark'
+--vim.cmd('colorscheme Tomorrow-Night')
+vim.g.material_style = "palenight"
+vim.cmd('colorscheme material')
 
 vim.g.python3_host_prog = "/Users/grzegorz/.asdf/shims/python3"
 vim.g.python_host_prog = "/Users/grzegorz/.asdf/shims/python2"

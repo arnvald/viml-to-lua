@@ -9,8 +9,7 @@ return require('packer').startup(function()
   use 'andymass/vim-matchup' -- matching parens and more
   use 'bronson/vim-trailing-whitespace' -- highlight trailing spaces
   use 'rhysd/git-messenger.vim'
-  use 'marko-cerovac/material.nvim'
-  require('material').set()
+  use 'marko-cerovac/material.nvim' -- material theme
 
   use { 'lewis6991/gitsigns.nvim', -- git added/removed in sidebar + inline blame
     requires = { 'nvim-lua/plenary.nvim' },
